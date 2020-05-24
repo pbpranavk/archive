@@ -1,0 +1,11 @@
+.delete{
+    border: 2px solid red;
+    color: red;
+    background-color: white;
+}
+
+.watch-button{
+    background-color: #e8e8e8;
+    border: 0;
+    border-radius: 5px;
+}

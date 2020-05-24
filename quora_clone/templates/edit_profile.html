@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %} Edit Profile {% endblock %}
+{% block content%}
+    <div class="card" style=" background-color: #f2f2f2; float: left; width: 60%; margin-left: 20%; padding: 2%;
+      border-radius: 25px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      " >
+
+  <div class="card-body" >
+    <h5 class="card-title" style= "float: left;">User name : {{user.username}}<br/></h5><br/><br/>
+    <p class="card-text" style= "float: left;">User firstname : {{user.first_name}}<br/></p><br/><br/>
+    <p class="card-text" style= "float: left;">User lastname : {{user.last_name}}<br/></p><br/><br/>
+   <p class="card-text" style= "float: left;">No. of questions asked : {{user.question_set.all.count}}<br/></p> <br/><br/>
+    <p class="card-text" style= "float: left;">Likes count : {{user.like_set.all.count|add:user.commentlike_set.all.count}}<br/></p><br/><br/>
+    <p class="card-text" style= "float: left;">Dislike count : {{user.dislike_set.all.count|add:user.commentdislike_set.all.count}}<br/></p><br/><br/>
+   <p class="card-text" style= "float: left;">Comment/ Answers count : {{user.comment_set.all.count }}<br/></p> <br/>
+
+<br/>
+    <div style="float: left">
+<h5>Edit your details below: </h5>
+  <form  action="{% url 'signup:edit_pro' %}"  method="POST" value="{{request.GET.q}}">
+        {% csrf_token %}
+        <input  name="fname" placeholder="Enter first name"/><br/>
+       <input  name="lname" style="margin: 2%" placeholder="Enter last name"/> <br/>
+       <input type="submit" name="submit" value="Submit"/>
+    </form>
+    </div>
+
+
+  </div>
+</div>
+
+{% endblock%}

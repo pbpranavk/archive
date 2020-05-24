@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package quora.questions;
+
+import "Answers.proto";
+import "Common.proto";
+import "User.proto";
+
+service Question{
+    rpc AddQuestion(QuestionRequest) returns (QuestionResponse) {}
+    rpc UpdateQuestion(QuestionRequest) returns (QuestionResponse) {}
+    rpc DeleteQuestion(QuestionRequest) returns (QuestionResponse){}
+    rpc GetQuestion(QuestionRequest) returns (QuestionResponse) {}
+    rpc GetAllQuestions(QuestionRequest) returns  (stream QuestionDetails) {}
+}
+
+message QuestionDetails {
+    int32 id = 1;
+    string title = 2;
+    string description = 3;
+}
+
+message QuestionRequest {
+    QuestionDetails question = 1;
+    int32 user_id = 2;
+}
+
+message QuestionResponse {
+    QuestionDetails question = 1;
+    repeated int32 answers_id = 2;
+    quora.common.StatusValue status = 3;
+}
+

@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package quora.votes;
+
+import "Common.proto";
+
+service Votes{
+    rpc Vote(VotesRequest) returns (VotesResponse);
+    rpc GetUpVotes(VotesRequest) returns (VotesResponse);
+    rpc GetDownVotes(VotesRequest) returns (VotesResponse);
+}
+
+message VotesRequest{
+    int32 vote_value = 1; //upvote = 1, downvote = -1;
+    int32 answer_id = 2;
+    int32 comment_id = 3;
+    int32 user_id = 4;
+}
+
+message VotesResponse{
+    int32 upvote_count = 1;
+    int32 downvote_count = 2;
+    quora.common.StatusValue status = 3;
+}

@@ -1,0 +1,106 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Securing React Apps with Auth01",
+      "slug": "Securing-React-Apps-with-Auth01",
+      "authorId": "2",
+      "category": "JavaScript"
+    },
+    {
+      "id": 2,
+      "title": "React: The Big Picture",
+      "slug": "React:-The-Big-Picture",
+      "authorId": "3",
+      "category": "JavaScript"
+    },
+    {
+      "id": 3,
+      "title": "Creating Reusable React Components",
+      "slug": "react-creating-reusable-components",
+      "authorId": 1,
+      "category": "JavaScript"
+    },
+    {
+      "id": 4,
+      "title": "Building a JavaScript Development Environment",
+      "slug": "javascript-development-environment",
+      "authorId": 1,
+      "category": "JavaScript"
+    },
+    {
+      "id": 5,
+      "title": "Building Applications with React and Redux",
+      "slug": "react-redux-react-router-es6",
+      "authorId": 1,
+      "category": "JavaScript"
+    },
+    {
+      "id": 6,
+      "title": "Building Applications in React and Flux",
+      "slug": "react-flux-building-applications",
+      "authorId": 1,
+      "category": "JavaScript"
+    },
+    {
+      "id": 7,
+      "title": "Clean Code: Writing Code for Humans",
+      "slug": "Clean-Code:-Writing-Code-for-Humans",
+      "authorId": "3",
+      "category": "Software Practices1"
+    },
+    {
+      "id": 10,
+      "title": "Web Component Fundamentals",
+      "slug": "web-components-shadow-dom",
+      "authorId": 1,
+      "category": "HTML5"
+    },
+    {
+      "title": "Securing React Apps with Auth01",
+      "category": "JavaScript1",
+      "authorId": "1",
+      "slug": "securing-react-apps-with-auth01",
+      "createdAt": 1564044587133,
+      "id": 11
+    },
+    {
+      "title": "A course",
+      "category": "some category",
+      "authorId": "2",
+      "slug": "a-course",
+      "createdAt": 1564124304430,
+      "id": 12
+    },
+    {
+      "title": "c course",
+      "category": "2category.",
+      "authorId": "3",
+      "slug": "c-course",
+      "createdAt": 1564128515063,
+      "id": 13
+    },
+    {
+      "title": "Def course",
+      "category": "asdfasfd",
+      "authorId": "3",
+      "slug": "def-course",
+      "createdAt": 1564131478495,
+      "id": 14
+    }
+  ],
+  "authors": [
+    {
+      "id": 1,
+      "name": "Cory House"
+    },
+    {
+      "id": 2,
+      "name": "Scott Allen"
+    },
+    {
+      "id": 3,
+      "name": "Dan Wahlin"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Protecting against regression issues..... 1`] = `
+<tr>
+  <td>
+    <button
+      className="watch-button"
+    >
+      Watch
+    </button>
+  </td>
+  <td
+    className="title"
+    onClick={[Function]}
+  >
+    <a
+      href="/courses/Securing-React-Apps-with-Auth01"
+      onClick={[Function]}
+    >
+      Securing React Apps with Auth01
+    </a>
+  </td>
+  <td>
+    
+  </td>
+  <td>
+    JavaScript
+  </td>
+  <td>
+    <button
+      className="delete"
+      onClick={[Function]}
+    >
+      <a
+        href="/courses"
+        onClick={[Function]}
+      >
+        Delete
+      </a>
+    </button>
+  </td>
+</tr>
+`;

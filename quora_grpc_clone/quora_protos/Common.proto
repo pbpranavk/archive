@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package quora.common;
+
+enum StatusValue {
+    UNKNOWN_STATUS_VALUE = 0;
+    SUCCESS = 1;
+    FAILURE = 2;
+}

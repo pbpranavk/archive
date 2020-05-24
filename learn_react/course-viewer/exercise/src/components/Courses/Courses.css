@@ -1,0 +1,22 @@
+.add{
+    margin-top: 5%;
+}
+
+.add-course{
+    color: white;
+    background-color: #007bff;
+    margin: 3% 0;
+    border-radius: 5px;
+}
+
+.add-course a{
+    color: white;
+}
+
+.table-hover a{
+    color: red;
+}
+
+.title a{
+    color: #007bff;
+}

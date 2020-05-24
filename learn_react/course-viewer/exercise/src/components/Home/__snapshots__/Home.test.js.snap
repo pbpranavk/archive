@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for the About component 1`] = `
+<div
+  className="element"
+>
+  <div
+    className="jumbotron"
+  >
+    <h1
+      className="display-4"
+    >
+      Pluralsight Administration
+    </h1>
+    <p
+      className="lead"
+    >
+      React, Redux and React Router for ultra-responsive web apps.
+    </p>
+    <a
+      className="btn btn-primary btn-lg"
+      href="/about"
+      onClick={[Function]}
+      role="button"
+    >
+      Learn more
+    </a>
+  </div>
+</div>
+`;

@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Protecting against regression issues..... 1`] = `
+<div
+  className="create-course"
+>
+  <h2>
+    Add Course
+  </h2>
+  <form
+    onSubmit={[Function]}
+  >
+    <p>
+      Title
+    </p>
+    <input
+      type="text"
+    />
+    <p>
+      Author
+    </p>
+    <select
+      id="authorDropdown"
+    >
+      <option
+        value=""
+      >
+        Select an author
+      </option>
+      <option
+        value={1}
+      >
+        Cory House
+      </option>
+    </select>
+    <p>
+      Category
+    </p>
+    <input
+      type="text"
+    />
+    <button
+      type="submit"
+    >
+      Save
+    </button>
+  </form>
+</div>
+`;

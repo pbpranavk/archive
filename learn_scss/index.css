@@ -1,0 +1,154 @@
+body {
+  background-color: #F2EEfB;
+  font-family: helvatica, ariel, sans-serif; }
+
+header {
+  margin: 20px 0 0 5%; }
+
+p {
+  margin: 20px margin; }
+
+h1 {
+  color: aqua; }
+
+h2 {
+  color: aqua;
+  margin: 10px 10%; }
+
+a {
+  color: rgba(0, 0, 255, 0.5); }
+
+.par1 a {
+  font-size: 40px; }
+
+.bad-vendor-prefix {
+  padding: 1%;
+  background-color: cream;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#F2EEfB), top(#F2EEfB));
+  background-image: -webkit-linear-gradient(top, #F2EEfB, #8e8a97);
+  background-image: -moz-linear-gradient(top, #F2EEfB, #8e8a97);
+  background-image: -ms-linear-gradient(top, #F2EEfB, #8e8a97);
+  background-image: -o-linear-gradient(top, #F2EEfB, #8e8a97); }
+
+.circular {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background-color: grey; }
+
+.class1 {
+  background-color: green; }
+  .class1 .parent-class, .class1 .child-class {
+    border: 1px solid black; }
+    .class1 .parent-class .nested-class, .class1 .child-class .nested-class {
+      font-weight: bold;
+      background-color: yellow;
+      width: 38.1944444444%; }
+  .class1 .child-class {
+    background-color: grey;
+    border-radius: 20%; }
+
+.circle {
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  background: grey;
+  display: block; }
+  .circle:hover {
+    background-color: black; }
+
+.triangle1 {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+  border-bottom: 200px solid black; }
+
+.triangle2 {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-top: 100px solid yellow; }
+
+.triangle3 {
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid green; }
+
+.triangle4 {
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 250px solid transparent;
+  border-bottom: 250px solid transparent;
+  border-right: 250px solid red; }
+
+ul.social-links li {
+  list-style: none; }
+  ul.social-links li a {
+    display: block; }
+
+.twitter {
+  background: url("./img/twitter.jpeg") no-repeat; }
+
+.facebook {
+  background: url("./img/facebook.jpeg") no-repeat; }
+
+.youtube {
+  background: url("./img/youtube.png") no-repeat; }
+
+.rs {
+  background: url("./img/rs.jpeg") no-repeat; }
+
+.one {
+  background: black;
+  color: text-contrast(black); }
+
+.two {
+  background: #141414;
+  color: text-contrast(#141414); }
+
+.three {
+  background: white;
+  color: text-contrast(white); }
+
+.four {
+  background: #c3c3c3;
+  color: text-contrast(#c3c3c3); }
+
+/*.circular{
+    color: text-contrast(black );
+}
+
+.three{
+    color: text-contrast(white);
+}*/
+.par-1 {
+  margin-left: 100px;
+  background: black;
+  color: white; }
+
+.par-2 {
+  margin-left: 200px;
+  background: #404040;
+  color: white; }
+
+.par-3 {
+  margin-left: 300px;
+  background: gray;
+  color: black; }
+
+.par-4 {
+  margin-left: 400px;
+  background: #bfbfbf;
+  color: black; }
+
+/*# sourceMappingURL=index.css.map */

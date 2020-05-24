@@ -1,0 +1,12 @@
+
+{% for ls in comment.commentlike_set.all %}
+{% if ls.user == user %}
+<i class="fa fa-thumbs-o-up" style="font-size:20px"></i>
+{% endif %}
+{% endfor %}
+
+{% for ls in comment.commentdislike_set.all %}
+{% if ls.user == user %}
+<i class="fa fa-thumbs-o-down" style="font-size:20px"></i>
+{% endif %}
+{% endfor %}

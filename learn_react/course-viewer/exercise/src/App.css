@@ -1,0 +1,22 @@
+.nav-item{
+  margin: 0 5%;
+}
+
+.link:hover{
+  text-decoration: none;
+}
+
+.element{
+  width: 80%;
+  margin: auto;
+  margin-top: 2%;
+}
+
+.selected{
+  color: Orange;
+}
+
+.selected:hover{
+  color: orange;
+  text-decoration: none;
+}

@@ -1,0 +1,79 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>{% block title %}Django Auth Tutorial{% endblock %}</title>{% load static %}
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="/static/home.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="{% static 'home.js' %}"></script>
+</head>
+
+<body >
+	<main>
+
+		<nav class="navbar navbar-inverse" >
+		<div class="row">
+			<div class="container-fluid" style= "vertical-align: middle;">
+				<ul class="nav navbar-nav" style="padding: 10px; float:left;"> <li> <a class="navbar-brand" href="#">Quora Clone</a> </li></ul>
+
+				<ul class="nav navbar-nav">
+					{% if act_allq %}
+							<li class="btn active" ><a  href="{%url 'home'%}">All Questions</a></li>
+					{% else %}
+							<li class="btn" ><a  href="{%url 'home'%}">All Questions</a></li>
+					{% endif %}
+					{% if act_createq %}
+						<li class="btn active" ><a  id="createQ" href="{%url 'questions:create_question'%}">Create a Question</a></li>
+					{% else %}
+						<li class="btn" ><a  id="createQ" href="{%url 'questions:create_question'%}">Create a Question</a></li>
+					{% endif %}
+					{% if user.is_authenticated %}
+						{% if act_editq %}
+							<li class="btn active" ><a class="btn" id="editQ" href="{%url 'signup:edit_pro'%}">Edit Profile</a></li>
+						{% else %}
+							<li class="btn" ><a class="btn" id="editQ" href="{%url 'signup:edit_pro'%}">Edit Profile</a></li>
+						{% endif %}
+					{% endif %}
+				</ul>
+
+				<form style="padding-top: 13px"class="navbar-form navbar-left" action="{% url 'questions:searchposts' %}" method="GET" value="{{request.GET.query}}">
+					<input type="text" name="query" value="{{request.GET.query}}" placeholder="Search posts" />
+					<input type="submit" name="submit" value="Search" />
+				</form>
+
+
+				{% if user.is_authenticated %}
+				<ul class="nav navbar-nav navbar-right">
+					<li class="btn" ><a  id= "changepwd" href="{%url 'change-password'%}"><span class="glyphicon glyphicon-user"></span> Change Password</a>
+					</li>
+					<li class="btn" ><a  id="logout" href="{%url 'logout'%}"><span class="glyphicon glyphicon-log-in"></span> Logout</a>
+					</li>
+				</ul>{% else %}
+				<ul class="nav navbar-nav navbar-right">
+					{% if act_signup %}
+						<li class="btn active" ><a  id = "signup" href="{% url 'signup:sup' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+					{% else %}
+							<li class="btn" ><a  id = "signup" href="{% url 'signup:sup' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+					{% endif %}
+					<li class="btn" ><a  id="login" href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+					</li>
+				</ul>{% endif %}
+
+				</div>
+		</div>
+		</nav>
+
+		{% if user.is_authenticated%}
+		<h4 style="margin-left: 5%">Welcome {{user.username}}</h4>
+		{% endif %}
+		<div style="text-align: center">{% block content %} {% endblock %}</div>
+	</main>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+.create-course{
+    margin: auto;
+    width: 80%;
+}
+.create-course select{
+    height: 35px;
+}
+.create-course input, .create-course select{
+    width: 100%;
+}
+
+.create-course p{
+    margin: 2% 0;
+}
+
+.create-course button{
+color: white;
+background-color: #007bff;
+margin: 3% 0;
+border-radius: 5px;
+}
+
+.create-course a{
+    color: white;
+}

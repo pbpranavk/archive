@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Protecting against regression issues..... 1`] = `
+<div
+  className="element"
+>
+  <h2>
+    Courses
+  </h2>
+  <button
+    className="btn add-course"
+  >
+    <a
+      href="/course"
+      onClick={[Function]}
+    >
+      Add Course
+    </a>
+  </button>
+  <table
+    className="table table-hover"
+  >
+    <thead>
+      <tr>
+        <th />
+        <th>
+          Title
+        </th>
+        <th>
+          Author
+        </th>
+        <th>
+          Category
+        </th>
+        <th />
+      </tr>
+    </thead>
+    <tbody>
+      <CourseItem
+        authors={
+          Array [
+            Object {
+              "id": 1,
+              "name": "Cory House",
+            },
+          ]
+        }
+        course={
+          Object {
+            "authorId": "2",
+            "category": "JavaScript",
+            "id": 1,
+            "slug": "Securing-React-Apps-with-Auth01",
+            "title": "Securing React Apps with Auth01",
+          }
+        }
+        courses={
+          Array [
+            Object {
+              "authorId": "2",
+              "category": "JavaScript",
+              "id": 1,
+              "slug": "Securing-React-Apps-with-Auth01",
+              "title": "Securing React Apps with Auth01",
+            },
+          ]
+        }
+      />
+    </tbody>
+  </table>
+</div>
+`;

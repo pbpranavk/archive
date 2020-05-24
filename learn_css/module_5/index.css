@@ -1,0 +1,21 @@
+.simple{
+    background-color: orange;
+}
+
+.along, .along-line{
+    color: white;
+}
+
+.along h2, .along p{
+    display:  inline;
+    background-color: blue;
+}
+
+.along-line h2{
+    display: inline-block;
+    background-color: green;
+    width: 45%;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,14 @@
+
+{% for ls in question.like_set.all %}
+{% if ls.user == user %}
+<i class="fa fa-thumbs-o-up" style="font-size:20px"></i>
+{% endif %}
+{% endfor %}
+
+
+{% for ls in question.dislike_set.all %}
+{% if ls.user == user %}
+<i class="fa fa-thumbs-o-down" style="font-size:20px"></i>
+{% endif %}
+{% endfor %}
+

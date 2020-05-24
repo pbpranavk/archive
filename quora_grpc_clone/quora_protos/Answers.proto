@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package quora.answers;
+
+import "Comment.proto";
+import "Common.proto";
+import "User.proto";
+
+service Answer{
+    rpc AddAnswer(AnswerRequest) returns (AnswerResponse) {}
+    rpc UpdateAnswer(AnswerRequest) returns (AnswerResponse) {}
+    rpc DeleteAnswer(AnswerRequest) returns (AnswerResponse){}
+    rpc GetAnswer(AnswerRequest) returns (AnswerResponse) {}
+    rpc GetAllAnswersOfAQuestion(AnswerRequest) returns  (stream AnswerDetails) {}
+    //rpc Vote(AnswerRequest) returns (AnswerResponse) {}  moved to votes proto
+}
+
+
+message AnswerDetails{
+    int32 id = 1;
+    string text = 2;
+    // repeated Comment comments = 3;  Should this be in answer response or here ?
+}
+
+message AnswerRequest{
+    AnswerDetails answer = 1;
+    //int32 vote_value = 2; //upvote = 1, downvote = -1; moved to votes proto
+    int32 user_id = 2;
+    int32 question_id = 3;
+}
+
+message AnswerResponse {
+    AnswerDetails answer = 1;
+    int32 likes_count = 2;
+    int32 dislikes_count = 3;
+    repeated int32 comment_ids = 4;
+    quora.common.StatusValue status = 5;
+}

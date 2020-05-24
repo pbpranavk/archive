@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Ask a question{% endblock %}
+
+{% block content %}
+ <h2>All Questions</h2>
+    {% for item in qList %}
+        <br/>
+        Created by {{item.user}}
+        <br/>
+        <b>Title:</b>{{ item.title }}
+        <br/>
+        <b>Description:</b> {{ item.description }}
+        <br/>
+
+
+
+    {% endfor %}
+
+
+
+
+{% endblock %}

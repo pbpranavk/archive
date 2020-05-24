@@ -1,0 +1,35 @@
+body{
+    text-align: center;
+}
+
+body p{
+    color: #b00000;
+    font-size: 1.5em;
+}
+
+.outer{
+    background-color: #c4c4c4;
+    border-color: #fcdb00;
+    border-style: solid;
+    width: 95%;
+    height: 70%;
+    margin: 5% auto;
+}
+
+.inner{
+    border-style: dashed;
+    border-color: blue;
+    background-color: white;
+    width: 90%;
+    height: 70%;
+    margin: 1% auto;
+}
+
+.core{
+    background-color: #c4c4c4;
+    border-style: dotted;
+    border-color: green;
+    width: 80%;
+    height: 60%;
+    margin: auto;
+}

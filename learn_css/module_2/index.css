@@ -1,0 +1,49 @@
+body{
+    font-family: "Open Sans";
+    width: 60%;
+    transform: translate(30%,10%);
+}
+
+.header{
+    color: black;
+
+}
+
+.header hr{
+    border-top: 0.8px dotted black;
+    margin-right: 12%;
+}
+
+.heading p{
+    font-size: 4.2em;
+    margin-top: 2%;
+    padding-right: 25%;
+    margin-bottom: 4%;
+}
+
+.description p{
+    font-size: 1.5em;
+    padding-right: 13%;
+    margin-top: 0%;
+}
+
+.vr{
+    width: 3px;
+    height: 10%;
+    margin: 0%;
+    padding: 0%;
+    background-color: black;
+    float: left
+}
+
+.point{
+    padding-left: 2%;
+
+    font-size: 1.3em;
+    margin-right: 13%;
+}
+
+.content{
+    margin-right: 7%;
+    font-size: 1.35em;
+}

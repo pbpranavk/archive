@@ -1,0 +1,90 @@
+.right-al{
+    float : right;
+}
+
+.to-left p{
+    float: left;
+    width: 100%;
+    text-align: left;
+}
+
+.answer{
+    margin-top: 5%;
+}
+
+ul .navbar-right{
+    margin-right: 0%;
+}
+
+.container, .form-container{
+    background-color: #f2f2f2 ;
+    border-radius: 25px 25px 35px 35px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.col-6 form{
+    width: 75%;
+}
+
+.col-9{
+    float:center;
+     width : 100%
+}
+
+.card{
+    float:left;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.card > .inner-container{
+    width: 90%;
+}
+
+.card-header{
+    float:left;
+    font-size:20px
+}
+
+.card-body{
+    font-size: 19px;
+    text-align: left;
+}
+
+.row > .card-footer{
+    float:left;
+    color: grey;
+}
+
+.action-buttons{
+    display: block;
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+.comment{
+    display: block;
+    width: 100%;
+    float: left;
+    text-align: left;
+    margin: 1% 0;
+}
+
+.comment-action-items{
+    margin-bottom: 1%;
+    display: block;
+    width: 100%;
+
+}
+.comment-extra{
+    display: block;
+    width: 100%;
+}
+
+.view-answers{
+    display: static;
+    margin: 1% 0;
+    width: 100%;
+}

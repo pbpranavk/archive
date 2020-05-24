@@ -1,0 +1,17 @@
+</head>
+<body>
+<h2>Created problem is</h2>
+
+<form  method="post">
+    {% csrf_token %}
+    <table>
+    Description : {{prob.desc}}
+    Created by : {{prob.user.username}}
+    </table>
+
+
+ 
+</form>
+</body>
+</html>
+

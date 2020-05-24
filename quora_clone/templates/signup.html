@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+  <h2>Sign up</h2><br/><br/>
+    <div >
+  <div class="row"  style="margin-left: 30%">
+  <div class ="col-6" style="width:90%;">
+
+  <form method="post" style="float: left; background-color: #f2f2f2; padding: 25px; border-radius: 25px;
+   border-radius: 25px; border-radius: 25px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"  >
+    {% csrf_token %}
+        <div class="form-group" style="float: left" >
+          <label for="id_username" style="float: left">Username:</label>
+          <input type="text" name="username" maxlength="150" autofocus="" required="" id="id_username" style="float: left"> <br/><br/><span class="helptext">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</span>
+        </div>
+        <br/><br/>
+        <div class="form-group" style="float: left">
+          <label for="id_password1">Password:</label>
+          <input type="password" name="password1" required="" id="id_password1" > <span class="helptext"></span>
+        </div>
+        <br/><br/><br/><br/>
+        <div style="float: center">
+        <ul >
+          <li >Your password can't be too similar to your other personal information.</li>
+          <li style="float: left">Your password must contain at least 8 characters.</li><br/>
+          <li style="float: left">Your password can't be a commonly used password.</li><br/>
+          <li style="float: left">Your password can't be entirely numeric.</li><br/>
+        </ul></div>
+        <br/>
+        <div class= "form-group" style="float: left">
+          <label for="id_password2" style="float: left">Password confirmation:</label>
+          <input style="float: left" type="password" name="password2" required="" id="id_password2"> <br/> <span class="helptext">Enter the same password as before, for verification.</span>
+       </div>
+       <br/> <br/> <br/> <br/>
+    <button id = "id_submit" type="submit">Sign up</button>
+  </form>
+</div>
+</div>
+</div>
+{% endblock %}

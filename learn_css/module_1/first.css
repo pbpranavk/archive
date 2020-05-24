@@ -1,0 +1,15 @@
+p.alert{
+ color: blue ;
+}
+
+#hello p{
+    color : red;
+}
+
+#hello p.bye{
+    color: green;
+}
+
+h1{
+    color: grey;
+}

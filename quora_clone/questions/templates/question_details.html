@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %} List of Answers {% endblock %}
+{% block content%}
+
+    <div class="card" style=" background-color: #f2f2f2; float: left; width: 60%; margin-left: 20%; padding: 2%;
+      border-radius: 25px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      " >
+
+        <div class="card-body to-left" >
+            <p>Question Title : {{question.title}}</p>
+            <br/>
+            <p>Question Description : {{question.description}}</p>
+            <br/>
+            <p>Answers are :</p>
+            <br/>
+            {% for item in question.answer_set.all %}
+                <p class="answer">{{ item.user}} : {{ item.text }}</p>
+                <br/>
+                <br/>
+                <form action="{% url 'questions:add_answer_comment' %}" method="POST" >
+                    {% csrf_token %}
+                        <div style="float:left;"><b>Comment:</b>
+                            <input type="text" name="comment_text" />
+                            <input type="submit" name="submitc" value="Submit" />
+                            <input type="hidden" name="answer_id" value="{{ item.pk }}">
+                            <input type="hidden" name="question" value="{{ question }}">
+                        </div>
+                </form>
+                <br/>
+                <br/>
+                {% for ans_item in item.answercomment_set.all %}
+                    <p>{{ ans_item.user }} : {{ ans_item.text }} </p>
+                {% endfor %}
+                <br/>
+                <br/>
+            {% endfor %}
+        </div>
+
+{% endblock%}
