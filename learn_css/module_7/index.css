@@ -1,0 +1,55 @@
+body{
+    font-family: "Open Sans";
+}
+
+.outer, .outer-last{
+
+    height:40%;
+    transform: translate(20%, 100%);
+    float: left;
+}
+
+.outer{
+    width: 40%;
+
+}
+
+.outer-last{
+    margin-left: 9%;
+    text-align: end;
+}
+
+.outer-last .circle{
+    margin-left: 60%;
+}
+.circle{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #2CB9EC;
+    border-radius: 100%;
+    background-color: #2CB9EC;
+}
+
+p{
+    color: #919294;
+    font-weight: bold;
+    margin: 0;
+}
+
+p ~ p{
+    color: #BFC5C5;
+    margin: 0;
+}
+
+.line , .line-mid{
+    width: 100%;
+    height: 2px;
+    background-color: #2CB9EC;
+    position: absolute;
+    top: 15%;
+
+}
+
+.line-mid{
+    width: 112%;
+}

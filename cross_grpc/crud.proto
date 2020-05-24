@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+service crud{
+    rpc create(Message) returns (Message) {}
+    rpc retrieve(Message) returns (Message) {}
+    rpc update(Message) returns (Message) {}
+    rpc delete(Message) returns (Message) {}
+}
+
+message Message{
+}

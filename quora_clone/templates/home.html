@@ -1,0 +1,102 @@
+{% extends 'base.html'%}
+{% block title %}
+	Home
+{% endblock %}
+{% block content %}
+<h2>All Questions</h2>
+{% for item in questions %}
+<div class="container" >
+	<div class="row">
+		<div class="col-9 ">
+			<div class="card">
+				<div class="inner-container">
+					<div class="row" >
+						<div class="card-header">
+							<h5 style="float:left; ">{{item.user}} asked :</h5>
+							<br/>
+							<br/> <b>Title :</b> {{item.title}}
+						</div>
+					</div>
+					<div class="row" >
+						<div class="card-body">
+                            <p><b>Description :</b> {{item.description}}</p>
+                        </div>
+					</div>
+					<div class="row" >
+						<div class="card-footer">
+                            Likes : {{ item.like_set.all.count }}
+                            Dislikes : {{item.dislike_set.all.count }}
+                            {% include "liked.html" with question=item %}
+
+						</div>
+						<div class="card-footer">
+							<br/>
+							<br/>
+						</div>
+						<div class="card-footer action-buttons" style="float:left;">
+							<form style="float:left; margin-right: 5px; " action="{% url 'questions:like' %}" method="POST">{% csrf_token %}
+								<input type="submit" name="submitc" value="Like" />
+								<input type="hidden" name="question" value="{{ item.pk }}">
+							</form>
+							<form style="float:left; margin-right: 5px " action="{% url 'questions:dislike' %}" method="POST">{% csrf_token %}
+								<input type="submit" name="submitc" value="Disike" />
+								<input type="hidden" name="question" value="{{ item.pk }}">
+							</form>
+							{% if item.user == user%}
+							<form style="float:left; margin-right: 5px" action="{% url 'questions:edit_ques' %}" method="POST">{% csrf_token %}
+								<input type="submit" name="submitc" value="Edit" />
+								<input type="hidden" name="question" value="{{ item.pk }}">
+							</form>
+							{% endif %}
+							{% if user.is_authenticated %}
+							<form style="float:left;" action="{% url 'questions:answer_ques' %}" method="GET">
+							{% csrf_token %}
+								<input type="submit" name="submitc" value="Answer" />
+								<input type="hidden" name="question_id" value="{{ item.pk }}">
+							</form>
+							{% endif %}
+							<br/>
+						</div>
+						<br/>
+						<br/>
+						<form action="{% url 'questions:add_comment' %}" method="GET" value="{{request.GET.comment_text}}">
+							<div style="float:left;"><b>Comment:</b>
+								<input type="text" name="comment_text" />
+								<input type="submit" name="submitc" value="Submit" />
+								<input type="hidden" name="question_id" value="{{ item.pk }}">
+							</div>
+						</form>
+						<br/>
+						<br/>
+							<div style="padding-bottom: 2%" >
+							{% for cItem in item.comment_set.all %}
+								<div class="comment" style="float:left;">
+								<b style="font-size:18px">{{cItem.user}}</b> : {{cItem.text}}
+								</div>
+
+							<div class="comment-action-items" style="float:left;">
+								<form style="float:left; margin-right: 5px; margin-left: 5px;" action="{% url 'questions:clike' %}" method="POST">{% csrf_token %}
+									<input type="submit" name="submitc" value="Like" />
+									<input type="hidden" name="comment" value="{{ cItem.pk }}">
+								</form>
+								<form style="float:left;" action="{% url 'questions:cdislike' %}" method="POST">{% csrf_token %}
+									<input type="submit" name="submitc" value="Dislike" />
+									<input type="hidden" name="comment" value="{{ cItem.pk }}">
+								</form>
+								<p style="float:left;">  Likes : {{cItem.commentlike_set.all.count}}</pre>
+								Dislike : {{cItem.commentdislike_set.all.count}}
+								{% include "cliked.html" with comment=cItem %} </p>
+							</div>
+
+						{% endfor%}
+						</div>
+					</div>
+					<a href="/questions/{{item.id}}/">View answers</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br/>
+{% endfor %}
+{% endblock %}

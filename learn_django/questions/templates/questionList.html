@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of questions</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body  style="text-align:center;">
+
+             
+ 
+                <h1>Search Page</h1>
+
+                <br/>
+                <form  action="{% url 'questions:searchposts' %}"  method="GET" value="{{request.GET.q}}">
+                Search <input type="text" name="q" value="{{request.GET.q}}" placeholder="Search posts"/>
+                <input type="submit" name="submit" value="Search"/>
+                </form>
+
+                {% if submitbutton == 'Search' and request.GET.q != '' %}
+                {% if results %}
+                <h1>Results for <b>{{ request.GET.q }}</b></h1>
+                <br/><br/>
+
+                {% for result in results %}
+ 
+                {{result.qTitle}}
+                <br/>
+
+                {{result.qDescription}}
+                <br/>
+
+                {% endfor %}
+                {% else %}
+                No search results for this query
+                {% endif %}
+                {% endif %}
+    <h2>All Questions</h2>
+    {% for item in quesList %}
+        <br/>
+
+        <b>Title:</b>{{ item.qTitle }}
+        <br/>
+        <b>Description:</b> {{ item.qDescription }}   
+        <br/>     
+        <b>x-to be replaced by no of likes</b>
+        No.Of Likes : {{item.likes_set.all.count}}
+        {% include "liked.html" with question=item %}
+
+        <form  action="{% url 'questions:like' %}"  method="POST" > 
+            {% csrf_token %}
+            <input type="submit" name="submitc" value="Like"/>
+            <input type="hidden" name="question" value="{{ item.pk }}">
+        </form>
+        <br/>
+        <form  action="{% url 'questions:addComment' %}"  method="GET" value="{{request.GET.c}}">
+        <b>Comment:</b><input type="text" name ="c">
+        <input type="submit" name="submitc" value="Submit"/>
+        <input type="hidden" name="question" value="{{ item.pk }}">
+        </form>
+        <p>list of all comments + like count to that commetn</p>
+        
+        {% for cItem in item.comentmodel_set.all %}
+            {{cItem.cText}}
+        {% endfor%}
+        
+        <br/>
+
+    {% endfor %}
+</table>
+</body>
+</html>
+

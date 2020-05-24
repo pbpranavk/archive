@@ -1,0 +1,136 @@
+body{
+    font-family: "Open Sans";
+}
+
+.content{
+    transform: translate(20%, 500%);
+}
+
+.heading{
+    color: #6f757d;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+.check-green{
+    color: #62c45e;
+    float: left;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.check-grey{
+    color: #D2D5DA;
+    float: left;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.summary-metrics, .graphs{
+    color: #888b8f;
+}
+
+.summary-metrics{
+    float: left;
+    width: 30%;
+    margin-left: 3%;
+    height: 200px;
+    position: relative;
+}
+
+.graphs{
+    float: left;
+    width: 40%;
+}
+
+.vline{
+    width: 2px;
+    height: 40%;
+    background-color: #888b8f;
+    margin-left: 2%;
+    display: inline-block;
+    position: static;
+}
+
+.item{
+
+    display: inline-block;
+    position: absolute;
+    left: 02%;
+    margin-top: 3%;
+    float: left;
+    display: inline-block;
+    width: 90%;
+
+}
+
+.item1{
+    top: 23%;
+}
+
+.item2{
+    top: 40%;
+}
+
+.item3{
+    top: 55%;
+}
+
+.item p{
+    margin: 0;
+    padding: 0;
+    float: left;
+    margin-left: 5px;
+    padding-bottom: 1%;
+}
+
+.horiz{
+    background-color: #888b8f;
+    width: 15%;
+    margin-top: 2%;
+    height: 2px;
+    float: left;
+    display: inline-block
+}
+
+/*-----------------------------------------------*/
+
+.graphs{
+    height: 300px;
+}
+
+.categories{
+    height:80%;
+    position: relative;
+}
+
+.vline2{
+    width: 2px;
+    height: 70%;
+    background-color: #888b8f;
+    margin-left: 2%;
+    display: inline-block;
+    position: absolute;
+}
+
+.horiz2{
+    background-color: #888b8f;
+    width: 15%;
+    margin-top: 2%;
+    height: 2px;
+    margin-left: 3%;
+
+    float: left;
+}
+
+.graph{
+    float: left;
+    width: 80%;
+    margin-bottom: 4%;
+}
+
+.graph p{
+    margin: 0;
+    padding: 0;
+    width: 70%;
+}

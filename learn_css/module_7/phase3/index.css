@@ -1,0 +1,105 @@
+body{
+    font-family: "Open Sans";
+    background-color: #F2F5FA;
+}
+.steps{
+    height: 300px;
+    width: 50%;
+    transform: translate(20%, 30%);
+    position: absolute;
+}
+
+.circle{
+    width: 25px;
+    height: 25px;
+    border : 2px solid grey;
+    border-radius: 50%;
+    background-color: #1EBB55;
+    color: white;
+    margin: auto;
+    display: inline-block;
+    z-index: 5;
+}
+
+.steps p{
+    margin: 0;
+    padding: 0;
+    margin-left: 4%;
+    display: inline-block;
+}
+
+.steps > div{
+    margin-bottom: 2%;
+    height: 13%;
+    position: relative;
+}
+
+.circle > p{
+    margin-left: 8px;
+
+}
+.vline{
+    top: 7%;
+    height: 10%;
+    width: 4.25px;
+    left: 2.7%;
+    background-color: grey;
+    position: absolute;
+    z-index: 1;
+}
+
+
+
+.vline3{
+    top: 25%;
+}
+.vline4{
+    top: 40%;
+}
+.vline5{
+    top: 55%;
+}
+.vline6{
+    top: 73%;
+}
+
+.vertic{
+    width: 4px;
+    background-color: grey;
+    height: 70%;
+    position: absolute;
+    left: 2%;
+    top: 65%;
+}
+
+.steps > div > p{
+    color : grey;
+}
+
+.status{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 40%;
+    height: 200px;
+    position: absolute;
+    transform: translate(120%, 70%);
+    background-color: white;
+}
+
+.status > p {
+
+    width: 90%;
+    margin-left: 25%;
+    margin-top: 8%;
+    position: relative;
+}
+
+.status > button{
+    background-color: #37C0EA;
+    width: 60%;
+    height: 20%;
+    margin-left: 20%;
+    margin-top: 2%;
+    position: relative;
+    top: 40%;
+}

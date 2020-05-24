@@ -1,0 +1,174 @@
+.header {
+  width: 99%;
+  height: 40px;
+  margin: 5px;
+  color: #fff;
+}
+
+.logo {
+}
+
+.fa-bars,
+.fa-search {
+  color: black;
+  padding-right: 4%;
+}
+
+.link {
+  color: black;
+  font-weight: bolder;
+  font-size: 0.8em;
+}
+
+.link:hover {
+  color: black;
+}
+
+.btn {
+  padding: 0;
+  width: 60px;
+  height: 30px;
+  font-size: 0.75em;
+  color: #ffffff;
+  background-color: #6288a5;
+  border: 1px solid #326891;
+}
+
+.horizontal-line {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.left i {
+  padding: auto;
+}
+
+.content {
+  width: 100%;
+  margin: 1% auto 5%;
+}
+
+.main-heading {
+  margin: 3% 30% 1%;
+  max-width: 450px;
+  font-size: 2.2em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.main-image,
+.image-description {
+  margin: 1% auto 0 8%;
+}
+
+.image-description {
+  width: 60%;
+  font-size: 0.85em;
+  color: grey;
+}
+
+.centre {
+  display: block;
+  margin: auto;
+  padding: 0;
+}
+
+.subscribe {
+  margin: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  background-color: #363636;
+  color: white;
+}
+
+.subscribe > p {
+  margin: auto;
+  font-size: 0.9em;
+}
+
+.subscribe-btn {
+  justify-content: center;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.subscribe-txt,
+.arrow {
+  font-size: 0.7em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.subscribe-txt {
+  margin-left: 17%;
+  margin-right: 10%;
+}
+
+.story {
+  width: 45%;
+  margin: auto;
+  font-size: 1.15em;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.signup-aside,
+.edior-pick-aside {
+  width: 15%;
+  right: 7%;
+  position: absolute;
+}
+
+.aside-submit {
+  width: 90%;
+}
+
+.aside-heading {
+  font-size: 1.1em;
+}
+
+.aside-summary {
+  font-size: 0.7em;
+  max-width: 70%;
+  color: grey;
+}
+
+.editor-image,
+.editor-title {
+  width: 75px;
+  height: 75px;
+  font-size: 0.6em;
+  margin-left: 5px;
+}
+
+.editor-article {
+  margin: 5px;
+}
+
+.inflation {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.inflation-parent {
+  margin: 5%;
+}
+
+.utube-video {
+  margin: auto;
+}
+
+.thumbnail {
+  width: 270px;
+  height: 180px;
+}

@@ -1,0 +1,156 @@
+.content{
+    width: 80%;
+}
+
+.box-1, .box-2, .box-3, .box-4, .box-5, .box-6{
+    width: 150px;
+    height: 150px;
+    background-color: aquamarine;
+    color: white;
+    float: left;
+    margin: 5%;
+    font-weight: bolder;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.box-1{
+    transform: rotate(20deg);
+}
+
+.box-2{
+    transform: rotate(-55deg);
+}
+
+.box-3{
+    transform: scale(0.75);
+}
+
+.box-4{
+    transform: scale(1.25);
+}
+
+.box-5{
+    transform: scaleX(0.5);
+}
+
+.box-6{
+    transform: scaleY(1.15)
+}
+
+
+.box-2{
+    transform: translateX(-10px);
+}
+
+.box-4{
+    transform: translateY(25%);
+}
+
+.box-1{
+    transform: skewX(5deg);
+}
+
+.box-6{
+    transform: perspective(200px) rotateX(45deg)  ;
+
+}
+
+.box-1{
+    background: aquamarine;
+    transition-property: background, border-radius;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transition-delay: 0s, 1s;
+}
+.box-1:hover{
+    background: #ff7b29;
+    border-radius: 50%;
+}
+
+button {
+    border: 0;
+    background: #0087cc;
+    border-radius: 4px;
+    box-shadow: 0 5px 0 #006599;
+    color: #fff;
+    cursor: pointer;
+    margin: 0;
+    outline: 0;
+    padding: 12px 20px;
+    transition: all .1s linear;
+  }
+
+button:active {
+    box-shadow: 0 2px 0 #006599;
+    transform: translateY(3px);
+}
+
+.card-container{
+      height: 150px;
+      perspective: 600;
+      position: relative;
+      width: 150px;
+      left: 60%;
+      background-color: antiquewhite;
+}
+
+.card{
+      height: 100%;
+      position: absolute;
+      transform-style: preserve-3d;
+      transition: all 1s ease-in-out;
+      width: 100%;
+}
+
+.card:hover{
+      transform: rotateY(180deg);
+}
+
+.card .side{
+      backface-visibility: hidden;
+}
+
+.card .back{
+      transform: rotateY(180deg);
+}
+
+
+@keyframes slide {
+    0% {
+      left: 0;
+      top: 0;
+    }
+    50% {
+      left: 244px;
+      top: 100px;
+    }
+    100% {
+      left: 488px;
+      top: 0;
+    }
+}
+.stage {
+    background: #eaeaed;
+    border-radius: 6px;
+    height: 150px;
+    position: relative;
+    min-width: 538px;
+}
+.stage:hover .ball {
+    animation: slide 2s linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.ball {
+    background: #2db34a;
+    border-radius: 50%;
+    height: 50px;
+    position: absolute;
+    width: 50px;
+}
+
+.stage:active .ball{
+    animation-play-state: paused;
+}

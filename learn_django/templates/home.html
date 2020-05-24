@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+
+{% if user.is_authenticated %}
+<div style = "width: 100%">
+  <div style = "float: left; top: 50%; width: 75%; left: 5%">
+    Hi {{ user.username }}!
+  </div>
+  <div style = "float: left; top: 50%; width: 25% "> 
+    <p><a href = "{%url 'logout'%}">logout</a></p>
+  </div>
+</div>  
+   <p><a href = "{%url 'questions:createQues'%}">create Question</a></p> 
+  <p><a href = "{%url 'ask:createTag'%}">create Tag</a></p>  
+ <p><a href = "{%url 'ask:createArticle'%}">create Article</a></p>   
+{% else %}
+<div style = "width: 100%">
+  <div style = "float: left; top:50%; width: 75%">
+    <p>You are not logged in</p>
+  </div>
+  <div style = "float: left; top:50%;  width: 25%"  >
+  <p>
+    <a href="{% url 'login' %}">login</a>
+   <a href="{% url 'login:signup' %}">sign-up</a>
+   </p>
+  </div>
+  <br/>
+{% endif %}
+
+{% include "questionList.html" with quesList=quesList %}
+{% endblock %}

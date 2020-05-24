@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package quora.comment;
+
+import "Common.proto";
+import "User.proto";
+
+service Comment{
+    rpc AddComment(CommentRequest) returns (CommentResponse) {}
+    rpc UpdateComment(CommentRequest) returns (CommentResponse) {}
+    rpc DeleteComment(CommentRequest) returns (CommentResponse){}
+    rpc GetComment(CommentRequest) returns (CommentResponse) {}
+    rpc GetAllCommentsOfAnAnswer(CommentRequest) returns (stream CommentDetails) {}
+    //rpc Vote(CommentRequest) returns (CommentResponse) {} moved to votes proto
+}
+
+message CommentDetails {
+    int32 id = 1;
+    string text = 2;
+}
+
+message CommentRequest{
+    CommentDetails comment = 1;
+    //int32 vote_value = 2;  //upvote = 1, downvote = -1;
+    int32 answer_id = 2;
+    int32 user_id = 3;
+}
+
+message CommentResponse {
+    CommentDetails comments = 1;
+    int32 likes_count =  2;
+    int32 dislikes_count = 3;
+    quora.common.StatusValue status = 4;
+}

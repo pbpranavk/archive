@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+service TodoService{
+    rpc AddToDo(Txt) returns (Empty) {}
+    rpc DeleteToDO(Id) returns (Empty) {}
+    rpc DoneToDO(Id) returns (Empty) {}
+    rpc GetToDoList(Empty) returns (stream ToDo) {}
+    
+}
+
+message ToDo{
+    int32 id = 1;
+    string text = 2;
+    bool is_done = 3;
+}
+
+message Empty{}
+
+message Txt {
+    string text = 1;
+}
+
+message Id {
+    int32 id = 1;
+}
+
+
+message List{
+    repeated ToDo t = 1;
+}

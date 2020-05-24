@@ -1,0 +1,10 @@
+{
+    "python.pythonPath": "/usr/local/bin/python3",
+    "editor.rulers": [100],
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#ff4081"
+    },
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wrappingIndent": "same",
+    "editor.wordWrapColumn": 100,
+}

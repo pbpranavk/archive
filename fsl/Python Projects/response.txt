@@ -1,0 +1,4 @@
+Key =start Value = 0
+Key =num_found Value = 24
+Key =numFound Value = 24
+Key =docs 

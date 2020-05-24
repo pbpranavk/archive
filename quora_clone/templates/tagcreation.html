@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Create a Tag{% endblock %}
+
+{% block content %}
+  <h2>What tag would u wanna create today?</h2>
+  <form action="/questions/create_tag" method="post">
+    {% csrf_token %}
+    <table>
+    {{form.as_table}}
+    </table>
+    <input type="submit" value="Submit" />
+</form>
+{% endblock %}

@@ -1,0 +1,36 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Answer the question{% endblock %}
+
+{% block content %}
+  <h2>So u know the answer...What is it it?</h2>
+  <p>Question : title : {{question.title}}</p>
+  <p>Question Description : {{question.description}}</p>
+  <div style="height: 30%">
+  <div class="row" >
+  <div class ="col-6" style="width:90%; margin-left: 17%; height: 60% ;">
+  <form  action="/questions/answer_ques" method="POST" style="width: 75%;   background-color: #f2f2f2;
+   border-radius: 25px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); ">
+    {% csrf_token %}
+
+<table style="float:center; width: 70%; ">
+
+    <tbody style="width: 100%;">
+        <tr>
+            <th>
+                <label for="id_question_desc" style="padding:15px">Answer:</label>
+            </th>
+            <td style="width: 100%">
+                <textarea style="float: center; width: 100%; margin-left: 15%; margin-top: 5%" name="answer_text"  rows="15" maxlength="50" required="" id="id_text"></textarea>
+            </td>
+        </tr>
+    </tbody>
+</table>
+    <input type="hidden" name="question_id" value="{{ question.pk }}">
+    <input type="submit" value="Submit"  style="margin: 15px; "/>
+</form>
+</div>
+</div>
+</div>
+{% endblock %}

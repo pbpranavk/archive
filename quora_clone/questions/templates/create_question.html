@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Ask a question{% endblock %}
+
+{% block content %}
+  <h2>Go on!!! Clear your doubts... Ask a question</h2>
+  <div >
+    <div class="row" >
+        <div class ="col-6" style="width:90%; margin-left: 17%">
+            <form  action="/questions/create_question" method="post" style="width: 75%;  background-color: #f2f2f2;
+            border-radius: 25px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); ">
+                {% csrf_token %}
+                <table style="float:center; width: 80%">
+                    <tbody>
+                        <tr>
+                            <th style="width: 40%">
+                                <label for="id_question_title" style="padding-left: 15px"> Question title:</label>
+                            </th>
+                            <td>
+                                <textarea class="form-control" name="title"  rows="5" maxlength="80" required="" id="id_question_title" style="margin-bottom: 15px; padding-left: 5px"></textarea>
+                            </td>
+                        </tr>
+                        <br/>
+                        <tr>
+                            <th style="width: 40%">
+                                <label for="id_question_desc" style="padding:15px">Question desc:</label>
+                            </th>
+                            <td>
+                                <textarea class="form-control" name="description"  rows="20" maxlength="160" required="" id="id_question_desc"></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <input type="submit" value="Submit"  style="margin: 15px; "/>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

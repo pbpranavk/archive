@@ -1,0 +1,6 @@
+
+{% for ls in question.likes_set.all %}
+{% if ls.user == user %}
+u have liked this question
+{% endif %}
+{% endfor %}

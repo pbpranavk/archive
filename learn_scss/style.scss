@@ -1,0 +1,160 @@
+@import "style2";
+
+$blue:aqua;
+$margin:5%;
+$cream:#F2EEfB;
+$cream2:$cream - 100;
+
+@mixin border-radius($radius: 20px) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin circle($width){
+    width: $width;
+    height: $width;
+    @include border-radius($width / 2);
+}
+
+
+
+body{ background-color: $cream; font-family: helvatica, ariel, sans-serif; }
+header{ margin: 20px 0 0 $margin;}
+p{margin:20px margin;}
+h1{color:$blue}
+h2{color: $blue; margin: 10px $margin+5%;}
+a {color:rgba( blue, 0.5);}
+
+.par1{
+    a{ font-size: 40px;}
+}
+
+.bad-vendor-prefix{
+    padding: 1%;
+    background-color: cream;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($cream), top($cream));
+    background-image: -webkit-linear-gradient(top, $cream, $cream2);
+    background-image: -moz-linear-gradient(top, $cream, $cream2);
+    background-image: -ms-linear-gradient(top, $cream, $cream2);
+    background-image:  -o-linear-gradient(top, $cream, $cream2);
+}
+
+.circular{
+    @include border-radius;
+    background-color: grey;
+}
+
+.class1{
+    background-color: green;
+
+    .parent-class{
+        border: 1px solid black;
+        .nested-class{
+            font-weight: bold;
+            background-color: yellow;
+            width: percentage($number: 550px / 1440px);
+        }
+    }
+
+    .child-class{
+        @extend .parent-class;
+        background-color: grey;
+        border-radius: 20%;
+    }
+}
+
+.circle{
+
+    @include circle(100px);
+    background: grey;
+    &:hover {background-color: black;}
+    display: block;
+}
+
+.triangle1 {
+    display: block;
+
+    @include triangle(200px, up , black );
+
+}
+.triangle2 {
+    display: block;
+
+    @include triangle(100px, 'down' , yellow );
+
+}
+.triangle3 {
+    display: block;
+
+    @include triangle(50px, 'left' , green );
+
+}
+.triangle4 {
+    display: block;
+
+    @include triangle(250px, 'right' , red );
+
+}
+
+ul.social-links li{
+    list-style: none;
+    a{
+        display: block;  }
+}
+
+$icons: (twitter, facebook, youtube, rs);
+
+@each $social in $icons {
+    .#{$social} {
+        @if '#{$social}' != 'youtube'{
+
+            background: url('./img/#{$social}.jpeg' )no-repeat;
+        }@else{
+
+            background: url('./img/#{$social}.png' )no-repeat;
+        }
+    }
+}
+
+@each $p in (
+    one black,
+    two black+ 20,
+    three white,
+    four white - 60
+) {
+    .#{nth($p,1)} { background: #{nth($p,2)} ;  color: text-contrast(#{nth($p,2)} );}
+}
+
+@function text-contrast($background) {
+    @if lightness($background) < 50% {
+        @return  white;
+    } @else {
+        @return black;
+    }
+}
+
+/*.circular{
+    color: text-contrast(black );
+}
+
+.three{
+    color: text-contrast(white);
+}*/
+
+// @for $i from 1 through 4 {
+//     .par-#{$i} {
+//         margin-right: 20px * $i;
+//     }
+// }
+$i : 1 ;
+$parbg : black;
+@while $i < 5 {
+  .par-#{$i} {
+     margin-left: 100px * $i ;
+     background: $parbg;
+     color: text-contrast($parbg);
+  }
+  $parbg : lighten($parbg , 25%);
+  $i : $i +1 ;
+}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Ask a question{% endblock %}
+
+{% block content %}
+  <h2>Edit Quest here::</h2>
+  <br/>
+    <div class= "container-diff">
+  <div class="row" >
+  <div class ="col-6" style="width:90%; margin-left: 17%">
+  <form action="/questions/update_ques" method="post" style="width:75%; background-color: #f2f2f2;
+   border-radius: 25px; border-radius: 25px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    {% csrf_token %}
+      <table>
+        <tbody>
+          <tr>
+            <th>
+              <label style="padding: 15px">Question title :</label>
+            </th>
+            <td>
+              <textarea  class= "form-control" name="new_question_title" cols="80" rows="5" maxlength="80"
+                style="margin-top: 15px; margin-bottom: 15px">{{question_title}}</textarea>
+            </td>
+          </tr>
+
+          <tr>
+            <th>
+              <label  style="padding: 15px" >Question Description :</label>
+            </th>
+            <td>
+              <textarea   class="form-control" name="new_question_description" cols="80" rows="10" maxlength="160">{{question_desc}}</textarea>
+            </td>
+            <input type="hidden" name='question' value="{{question}}" />
+          </tr>
+        </tbody>
+      </table>
+
+    <input type="submit" value="Submit" style="margin: 15px"/>
+</div>
+</div></div>
+</form>
+
+{% endblock %}
+
