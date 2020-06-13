@@ -1,0 +1,13 @@
+---
+layout: default
+modal-id: 6
+date: 2014-07-15
+img: obdpi.jpg
+alt: image-alt
+title: Smart Car
+project-date: April 2014
+client: Start Bootstrap
+category: Web Development
+description: In this project I use On-Board-Diagnostics(OBD) and raspberry pi to send data from a car to the cloud for analysis to  build a predictive .Data from the obd at real time is fed to this model to check for the theft of fuel from the vehicle.if theft takes place a notification is sent to the owner.Code for this will be uploaded soon.
+
+---

@@ -1,0 +1,14 @@
+---
+layout: default
+modal-id: 3
+date: 2014-07-16
+img: empp.jpg
+alt: image-alt
+project-date: April 2014
+client: Start Bootstrap
+category: Web Development
+title: Emp Data Analysis
+description: In this note book key attibutes of employees are analysed and a model is built in random forests using xgboost library to predict the efficience of a particular employee the link to this repo is <a href="https://github.com/pbpranavk/empAttributes"  class="btn btn-default"><i class="fa fa-fw fa-github"></i> github</a> 
+ 
+
+---

@@ -1,0 +1,13 @@
+---
+layout: default
+modal-id: 8
+date: 2014-07-15
+img: pong1.jpg
+alt: image-alt
+project-date: April 2014
+title: Python playing pong
+client: Start Bootstrap
+category: Web Development
+description: <a href=" https://www.youtube.com/watch?v=PDbXPBwOavc"  class="btn btn-default"></i> youtube </a> after watching this video i tried to change it a bit and run the code will be uploaded soon on to github..
+
+---

@@ -1,0 +1,203 @@
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Machine Learning</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                {% for post in site.posts %}
+                    <div class="col-sm-3 portfolio-item">
+                        <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content" >
+                                    <i class="fa fa-search-plus fa-3x"></i>
+
+                                    <p class='cap'>{{post.title}}</p>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+                <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>IOT, DAPP &amp; Hadoop</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-sm-3 portfolio-item">
+                        <a href="#portfolioModal-dparking" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content" >
+                                    <i class="fa fa-search-plus fa-3x"></i>
+
+                                    <p class='cap'>Decentralised Parking</p>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/dparking.jpg" class="img-responsive" alt="{{ post.alt }}">
+                        </a>
+                    </div>
+                    <div class="col-sm-3 portfolio-item">
+                        <a href="#portfolioModal-arapp" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content" >
+                                    <i class="fa fa-search-plus fa-3x"></i>
+
+                                    <p class='cap'>Augmented Reality App</p>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/ar_spider.png" class="img-responsive" alt="{{ post.alt }}" style="height: 190px;">
+                        </a>
+                    </div><div class="col-sm-3 portfolio-item">
+                        <a href="#portfolioModal-hdfsxplorer" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content" >
+                                    <i class="fa fa-search-plus fa-3x"></i>
+
+                                    <p class='cap'>Hadoop Explorer</p>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/hadoop.png" class="img-responsive" alt="{{ post.alt }}">
+                        </a>
+                    </div><div class="col-sm-3 portfolio-item">
+                        <a href="#portfolioModal-dbsec" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content" >
+                                    <i class="fa fa-search-plus fa-3x"></i>
+
+                                    <p class='cap'>Dragon Board Security System</p>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/dbordsec.png" class="img-responsive" alt="{{ post.alt }}">
+                        </a>
+                    </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+        <div class="portfolio-modal modal fade" id="portfolioModal-dparking" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Decentralised Parking</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/dparking.jpg" class="img-responsive img-centered" alt="{{ post.alt }}">
+                            <p>Built using solidity &amp; truffle</p>
+
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+        <div class="portfolio-modal modal fade" id="portfolioModal-hdfsxplorer" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Hadoop Explorer</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/hadoop.jpg" class="img-responsive img-centered" alt="{{ post.alt }}">
+                            <p>A simple desktop application built with java to comunicate with a hadoop cluster and restore data from it.</p>
+
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+        <div class="portfolio-modal modal fade" id="portfolioModal-arapp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Augmented Reality App</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/ar_spider.png" class="img-responsive img-centered" alt="{{ post.alt }}">
+                            <p>App built using unity and vuforia.</p>
+
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+        <div class="portfolio-modal modal fade" id="portfolioModal-dbsec" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Dragon Board Security System</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/dbordsec.jpg" class="img-responsive img-centered" alt="{{ post.alt }}">
+                            <p>Security system made with Dragon Board , PIR motion sensor and a camera.</p>
+
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+

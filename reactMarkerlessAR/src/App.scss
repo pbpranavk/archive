@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+
+  .ar-sceen{
+    z-index: 1;
+  }
+
+  .video-playback {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

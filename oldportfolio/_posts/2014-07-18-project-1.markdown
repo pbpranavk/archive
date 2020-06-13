@@ -1,0 +1,13 @@
+---
+layout: default
+modal-id: 1
+date: 2014-07-18
+img: ipl.jpg
+alt: image-alt
+project-date: April 2014
+client: Start Bootstrap
+category: Web Development
+title: IPL Data Set Analysis
+description: In this notebook I try to analyse the performance of bowlers and batsmen based on the data from 9 seasons of the Indian Premier League(2008-2016)...Looking forward to predict their performance by building a predict model based on this data.The ipython-notebook can be accessed by clicking this button <a href="https://github.com/pbpranavk/iplAnalysis"  class="btn btn-default"><i class="fa fa-fw fa-github"></i> github</a> 
+
+---

@@ -1,0 +1,13 @@
+---
+layout: default
+modal-id: 4
+date: 2014-07-15
+img: nyse.jpg
+alt: image-alt
+project-date: April 2014
+title: Stock Market Predictions
+client: Start Bootstrap
+category: Web Development
+description: Check out how I use LSTM to build models for data from The New York Stock Exchange  <a href="https://github.com/pbpranavk/NYSE"  class="btn btn-default"><i class="fa fa-fw fa-github"></i> github</a>
+
+---

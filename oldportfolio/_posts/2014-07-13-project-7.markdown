@@ -1,0 +1,13 @@
+---
+layout: default
+modal-id: 7
+date: 2014-07-15
+img: car.jpg
+alt: image-alt
+title: The Self Driving Car
+project-date: April 2014
+client: Start Bootstrap
+category: Web Development
+description: One of the projects that helped me to learn a lot and make many new friends was this one.We use python,raspberry pi,neural nets to capture an image and drive a car like the google driverless car .check out the video  @ <a href="https://www.youtube.com/watch?v=zM-aFig3tGM&t=2s"  class="btn btn-default"> youtube</a> and the link to the repo is <a href="https://github.com/pbpranavk/SelfDrivingCar"  class="btn btn-default">github</a>
+
+---

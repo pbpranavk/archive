@@ -1,0 +1,14 @@
+---
+layout: default
+modal-id: 5
+date: 2014-07-14
+img: ecom1.jpg
+alt: image-alt
+project-date: April 2014
+client: Start Bootstrap
+title: e-Commerce Product Recomendation
+category: Web Development
+description: Data from different ecommerce websites is taken and predictive models are built .These models are built to know the taste of each particular visitor. These models predict the products which a customer might like based on his/her taste . Notebook of this project is at <a href="https://github.com/pbpranavk/eCommerceData"  class="btn btn-default"><i class="fa fa-fw fa-github"></i> github</a> 
+ 
+
+---
