@@ -32,10 +32,10 @@ if (enDocsModified && !cnDocsModified) || (!enDocsModified && cnDocsModified) {
 }
 
 // Warn, asking to update Chinese README if only English README are updated and vice-versa
-let enReameModified = danger.git.modifiedFiles.contains { $0.contains("Readme.md") }
-let chReameModified = danger.git.modifiedFiles.contains { $0.contains("Readme_CN.md") }
-if (enReameModified && !chReameModified) || (!enReameModified && chReameModified) {
-    warn("Consider **also** updating the \(enReameModified ? "Chinese" : "English") README. For Chinese translations, request the modified file(s) to be added to the list [here](https://github.com/Moya/Moya/issues/1357) for someone else to translate, if you can't do so yourself.")
+let enReadmeModified = danger.git.modifiedFiles.contains { $0.contains("Readme.md") }
+let chReadmeModified = danger.git.modifiedFiles.contains { $0.contains("Readme_CN.md") }
+if (enReadmeModified && !chReadmeModified) || (!enReadmeModified && chReadmeModified) {
+    warn("Consider **also** updating the \(enReadmeModified ? "Chinese" : "English") README. For Chinese translations, request the modified file(s) to be added to the list [here](https://github.com/Moya/Moya/issues/1357) for someone else to translate, if you can't do so yourself.")
 }
 
 // Warn when there is a big PR
